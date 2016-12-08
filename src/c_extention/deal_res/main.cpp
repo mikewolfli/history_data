@@ -358,6 +358,9 @@ vector<data_row> combine_the_same_section(vector<data_row> &rows)
     data_row dr_base;
     size_t i_count = rows.size();
 
+    //char a[25];
+
+    //MessageBox(NULL, itoa(i_count, a, 10), "对话框（标题）", MB_OK);
 
     string s_refresh_id;
 
@@ -604,7 +607,7 @@ vector<data_row> from_dataset(PyObject * pyo)
 
          //    printf("%ld",t_temp.iter);
 
-             if(i!=0)
+             if(i!=0&&!b_continue)
                 res_data.push_back(t_temp);
 
              b_continue =false;
